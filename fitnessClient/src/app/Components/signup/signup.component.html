@@ -1,0 +1,65 @@
+<div class="bootstrap-wrapper mt">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <img class="img-fluid" style="width: 80px;" src="/assets/signup.png" alt="">
+                </div>
+
+                <h1 class="text-center">Signup Here</h1>
+
+                <!--Signup form -->
+                
+                <mat-form-field class="full-width">
+                    <mat-label>Name</mat-label>
+                    <input type="text" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <mat-label>Email</mat-label>
+                    <input type="text" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  
+                  <mat-form-field class="full-width">
+                    <mat-label>Gender</mat-label>
+                    <select matNativeControl required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>               
+                      </select>
+                  </mat-form-field>
+
+                  <mat-form-field class="full-width">
+                    <mat-label>Fitness Goal</mat-label>
+                    <select matNativeControl required>
+                        <option value="Fat Loss">Fat Loss</option>
+                        <option value="Muscle Gain">Muscle Gain</option>
+                      </select>
+                  </mat-form-field>
+
+                  <mat-form-field class="full-width">
+                    <mat-label>Weight</mat-label>
+                    <input type="number" matInput>
+                </mat-form-field>  
+
+                <div class="container text-center">
+                    <button mat-raised-button color="primary">Signup</button>
+
+                    <div class="mt"><h4 class="text-center ">have an account? <span><a routerLink="/login">Login</a></span></h4></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

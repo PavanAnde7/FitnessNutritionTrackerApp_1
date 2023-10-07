@@ -1,0 +1,11 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+a {
+    line-height: 1em;
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+}
