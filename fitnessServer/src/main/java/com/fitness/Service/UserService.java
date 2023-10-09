@@ -1,27 +1,17 @@
 package com.fitness.Service;
-
-
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.fitness.Entity.User;
+import com.fitness.DTOs.User;
+import com.fitness.GlobalExceptionHandler.UserAlreadyExistException;
 import com.fitness.repository.UserRepository;
 
 @Service
-public class UserService {
+public interface UserService {
     
-    @Autowired
-    private UserRepository repository;
-
-    public User saveUser(User user){
-       return repository.save(user);
-    }
-
-    public List<User> getUsers(){
-        return repository.findAll();
-     }
-
+	User registerNewUser(User user) throws UserAlreadyExistException;
+	User findUserByEmail(String email);
+	List<User> findAll();
 }
